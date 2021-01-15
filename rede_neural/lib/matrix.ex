@@ -1,6 +1,11 @@
 defmodule Main.Matrix do
   def create(rows, cols) do
-    matrix = Matrex.new(rows, cols, fn () -> :rand.uniform(10) end)
+    matrix = Matrex.new(rows, cols, fn () -> 0 end)
+    matrix
+  end
+
+  def arrayToMatrix(arr) do
+    matrix = Matrex.new([Enum.map(arr, fn(x) -> x - x end), arr])
     matrix
   end
 
