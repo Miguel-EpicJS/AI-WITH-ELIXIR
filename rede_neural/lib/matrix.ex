@@ -4,6 +4,11 @@ defmodule Main.Matrix do
     matrix
   end
 
+  def rand(rows, cols) do
+    matrix = Matrex.new(rows, cols, fn () -> :rand.uniform() |> Float.round(4) end)
+    matrix
+  end
+
   def add(m1, m2) do
     matrix3 = Matrex.new(m1[:rows], m1[:cols], fn (i, j) -> m1[i][j] + m2[i][j] end)
     matrix3
