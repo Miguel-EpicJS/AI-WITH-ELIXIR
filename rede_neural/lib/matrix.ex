@@ -5,7 +5,7 @@ defmodule Main.Matrix do
   end
 
   def rand(rows, cols) do
-    matrix = Matrex.new(rows, cols, fn () -> :rand.uniform() |> Float.round(4) end)
+    matrix = Matrex.new(rows, cols, fn () -> (:rand.uniform() |> Float.round(4))*2-1 end)
     matrix
   end
 
